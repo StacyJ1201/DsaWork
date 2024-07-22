@@ -12,14 +12,16 @@ public class ShellSort {
     public static int[] shellSort(int[] array) {
         int n = array.length;
 
-        for (int incr = n/2; incr > 0; incr /= 2){
-            for (int i = incr; i < n; i += 1) {
-                int temp = array[i];
-                int j;
-                for (j = i; j >= incr && array[j - incr] > temp; j -= incr) {
-                    array[j] = array[j - incr];
+        for (int incr = 3; incr > 0; incr--){
+            for (int L = 0; L < n; L++) {
+                for (int i = 0; i < n; i+= incr) {
+                    int temp = array[i];
+                    int j;
+                    for (j = i; j >= incr && array[j - incr] > temp; j -= incr) {
+                        array[j] = array[j - incr];
+                    }
+                    array[j] = temp;
                 }
-                array[j] = temp;
             }
         }
         return array;
