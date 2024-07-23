@@ -1,12 +1,20 @@
 package SortingAlgos;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class ShellSort {
     public static void main(String[] args) {
-        int[] arr = {12, 34, 54, 2, 3, 19, 36, 45, 117};
+        int[] array = new int[10];
+        Random random = new Random();
 
-        System.out.println(Arrays.toString(shellSortDivided(arr)));
+        for (int number = 0; number < array.length; number++) {
+            array[number] = random.nextInt(100);
+        }
+
+        System.out.println(Arrays.toString(shellSortDivided(array)));
+
+        //System.out.println(Arrays.toString(shellSort(array)));
 
     }
     public static int[] shellSort(int[] array) {
