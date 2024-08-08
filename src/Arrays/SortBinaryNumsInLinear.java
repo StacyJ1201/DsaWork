@@ -1,8 +1,8 @@
-package SortingAlgos;
+package Arrays;
 
 import java.util.Arrays;
 
-public class sortBinaryinLinear {
+public class SortBinaryNumsInLinear {
     public static void main(String[] args) {
         int[] array = new int[]{1, 1, 1, 0, 1, 0, 0, 1,0};
 
