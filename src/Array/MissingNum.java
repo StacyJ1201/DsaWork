@@ -1,6 +1,6 @@
 //WAP to find Which number is missing in assorted array
 
-package Arrays;
+package Array;
 
 public class MissingNum {
     public static void main(String[] args) {

@@ -3,11 +3,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        int teeth = 20;
-        boolean canine = true, wolf = true;
+        int note = 5;
 
-        canine = (teeth!=10) ^ (wolf=false);
-        System.out.println(canine);
-
+        short melody = (byte)(double)(note *= 2);
     }
 }

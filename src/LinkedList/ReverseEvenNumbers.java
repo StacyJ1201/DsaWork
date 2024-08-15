@@ -1,13 +1,14 @@
-//check if a singly linked list is palindrome or not
-//eg:
-//list={1,2,3,3,2,1}
-//output:palindrome
+//write a program to reverse the consecutive  even nodes of the SINGLY linked list
+//input:{ 1, 2, 3, 3, 4, 6, 8, 5 }
+//output:{1, 2, 3, 3, 8, 6, 4, 5 }
 
 package LinkedList;
 
-public class Palindrome {
+public class ReverseEvenNumbers {
     public static void main(String[] args){
+        LinkedList linky = new LinkedList();
 
+        linky.append(2);
     }
     public static class Node{
         int data;
@@ -21,10 +22,10 @@ public class Palindrome {
     public static class LinkedList{
         Node start, last;
 
-        public void delete(int data){
-            if(start.data == data){
+        public void append(int data){
 
-            }
         }
+
+
     }
 }

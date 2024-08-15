@@ -2,7 +2,7 @@
 //int[] numArray = {10, 5, 8, 20, 15, 3, 25, 30};
 //output:30,25,20
 
-package Arrays;
+package Array;
 
 public class BiggestThreeNumbers {
     public static void main(String[] args) {

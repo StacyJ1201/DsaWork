@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 public class indexSum {
     int num1;

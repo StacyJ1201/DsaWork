@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 public class numOfOccurrences {
     public static void main(String[] args) {

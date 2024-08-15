@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 //Write a Java program to find the second-largest number in Java.
 public class secondLargestNum {

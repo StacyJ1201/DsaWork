@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 public class ZeroSumSubarrays {
     public static void findSubArrays(int[] arr) {

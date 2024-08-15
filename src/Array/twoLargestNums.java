@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 public class twoLargestNums {
     int largest = Integer.MIN_VALUE;

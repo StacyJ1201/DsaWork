@@ -1,4 +1,4 @@
-package Arrays;
+package Array;
 
 //WAP(WRITE A PROGRAM) to print all the prime numbers  combination of the given number
 //input n=80
