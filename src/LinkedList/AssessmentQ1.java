@@ -18,6 +18,23 @@ package LinkedList;
 
 public class AssessmentQ1 {
     public static void main(String[] args){
+        LinkedList l1 = new LinkedList();
+        l1.append(9);
+        l1.append(9);
+        l1.append(9);
+        l1.append(9);
+        l1.append(9);
+        l1.append(9);
+        l1.append(9);
+
+        LinkedList l2 = new LinkedList();
+        l2.append(9);
+        l2.append(9);
+        l2.append(9);
+        l2.append(9);
+
+        LinkedList result = l1.addList(l2);
+        result.displayList();
 
     }
     public static class Node{
@@ -43,37 +60,48 @@ public class AssessmentQ1 {
             last = newNode;
         }
 
-        public void add(LinkedList otherList){
-            int result = 0;
-             if(start.next == null){
-                 System.out.println(this.start.data + otherList.start.data);
-                 return;
-             }
+        public LinkedList addList(LinkedList otherList){
+            LinkedList result = new LinkedList();
+            Node current1 = this.start;
+            Node current2 = otherList.start;
+            int carry = 0;
 
-            this.reverse();
-            otherList.reverse();
-
-            Node current = start;
-            while(current.next != null){
-
+            while(current1 != null || current2 != null){
+                int x = (current1 != null) ? current1.data : 0;
+                int y = (current2 != null) ? current2.data : 0;
+                int sum = x + y + carry;
+                carry = sum / 10;
+                result.append(sum % 10);
+                if(current1 != null)current1 = current1.next;
+                if(current2 != null)current2 = current2.next;
             }
+            if(carry > 0) result.append(carry);
+
+            return result;
         }
 
-        public void reverse(){
-            Node ptr1 = start;
-            Node ptr2 = start.next;
-            Node ptr3 = start.next.next;
+        public void reverse() {
+            Node prev = null;
+            Node current = start;
+            Node next;
 
-            ptr1.next = null;
-            ptr2.next = ptr1;
-
-            while(ptr3.next != null){
-                ptr1 = ptr2;
-                ptr2 = ptr3;
-                ptr3 = ptr3.next;
-                ptr2.next = ptr1;
+            while(current != null){
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
             }
-            ptr2 = start;
+            start = prev;
+        }
+        public void displayList(){
+            Node current = start;
+
+            System.out.print("[ ");
+            while(current.next != null) {
+                System.out.print(current.data + ", ");
+                current = current.next;
+            }
+            System.out.println(current.data + " ]");
         }
     }
 }
