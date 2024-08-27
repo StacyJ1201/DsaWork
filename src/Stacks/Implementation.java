@@ -19,7 +19,6 @@ public class Implementation {
         array1.push(4);
         array1.push(5);
 
-        linky.pop();
 
         System.out.println(Arrays.toString(array1.displayArray()));
         linky.displayLinkedList();
@@ -27,9 +26,8 @@ public class Implementation {
     }
 
     public static class Array {
-        private int maxSize;
+        private int maxSize, top;
         private int[] stackArray;
-        private int top;
 
         public Array(int size){
             maxSize = size;
@@ -80,16 +78,21 @@ public class Implementation {
                 System.out.println("the stack is empty");
                 return -1;
             }
+            int popped = top.data;
             top = top.next;
-            return top.data;
+            return popped;
         }
 
         public void displayLinkedList(){
-            while(top.next != null){
-                System.out.print(top.data + " --> ");
-                top = top.next;
+            Node current = top;
+            while(current != null){
+                System.out.print(current.data);
+                current = current.next;
+                if(current != null){
+                    System.out.print(" --> ");
+                }
             }
-            System.out.println(top.data);
+            System.out.println();
         }
 
     }
