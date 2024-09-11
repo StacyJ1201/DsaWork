@@ -64,7 +64,7 @@ public class Implementation {
         }
     }
 
-    public static class LinkedListStack{
+    static class LinkedListStack{
         private Node top;
 
         public void push(int data){
